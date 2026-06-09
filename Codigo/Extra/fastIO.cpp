@@ -1,3 +1,6 @@
+// Para usar: n = read_int()
+// Pode dar errado se usar junto com cin
+
 int read_int() {
     bool minus = false;
     int result = 0;
