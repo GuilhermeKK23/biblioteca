@@ -1,4 +1,4 @@
-// Gerador de casos
+// gen.cpp
 //
 // Usa com o test.sh
 // Importante: é bom colocar um limite pequeno para pegar casos de borda, e garantir que vai ser um n válido

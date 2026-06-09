@@ -1,3 +1,5 @@
+# test.sh
+#
 # Gera vários casos de teste e compara a solução principal com uma solução bruteforce
 # Para usar, muda os nomes dos arquivos e roda bash test.sh
 # A.cpp eh o codigo principal, a saida vai para out1

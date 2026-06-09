@@ -1,3 +1,5 @@
+# hash_file.sh
+#
 # Gera o hash de cada linha do programa, para comparar com o hash da lib
 # Para usar, cria também o hash.sh e roda:
 # bash hash_file.sh A.cpp
