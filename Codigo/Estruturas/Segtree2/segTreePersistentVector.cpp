@@ -5,7 +5,7 @@
 // Update retorna a nova raiz
 //
 // Kth retorna o K-esimo elemento no range [L, R]
-// root[i] guarda uma seg de frequência do prefixo i
+// root[i] guarda uma seg de frequencia do prefixo i
 // Para calcular o K-esimo de [l, r], chama:
 // k = seg.kth(root[l-1], root[r], -MAX, MAX, k)
 // da pra generalizar essa ideia para K-esimo elemento do caminho de u ate v em uma arvore
