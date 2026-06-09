@@ -1,3 +1,4 @@
+# Para usar, muda os nomes dos arquivos e roda bash test.sh
 g++ A.cpp -o solve
 g++ brute.cpp -o brute
 g++ gen.cpp -o gen
