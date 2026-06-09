@@ -1,7 +1,7 @@
 // gen.cpp
 //
 // Usa com o test.sh
-// Importante: é bom colocar um limite pequeno para pegar casos de borda, e garantir que vai ser um n válido
+// Importante: eh bom colocar um limite pequeno para pegar casos de borda, e garantir que vai ser um n valido
 // Por exemplo: n = rng()%10+1
 
 int main(int argc, char** argv){

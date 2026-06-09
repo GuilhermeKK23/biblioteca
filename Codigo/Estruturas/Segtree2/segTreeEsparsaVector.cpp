@@ -1,8 +1,7 @@
 // SegTree Esparsa com vector
 //
-// Constante é meio ruim, mas é mais intuitivo de codar e modificar
-// Find retorna o índice de val
-
+// Constante eh meio ruim, mas eh mais intuitivo de codar e modificar
+// Find retorna o indice de val
 
 #define pb push_back
 

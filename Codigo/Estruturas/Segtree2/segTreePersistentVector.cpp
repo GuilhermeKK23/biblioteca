@@ -1,14 +1,14 @@
 // SegTree Persistente com vector
 //
-// Constante é meio ruim, mas é mais intuitivo de codar e modificar
-// É uma seg esparsa, então os índices podem ser grandes ou negativos
+// Constante eh meio ruim, mas eh mais intuitivo de codar e modificar
+// Eh uma seg esparsa, entao os indices podem ser grandes ou negativos
 // Update retorna a nova raiz
 //
-// Kth retorna o K-ésimo elemento no range [L, R]
+// Kth retorna o K-esimo elemento no range [L, R]
 // root[i] guarda uma seg de frequência do prefixo i
-// Para calcular o K-ésimo de [l, r], chama:
+// Para calcular o K-esimo de [l, r], chama:
 // k = seg.kth(root[l-1], root[r], -MAX, MAX, k)
-// dá pra generalizar essa ideia para K-ésimo elemento do caminho de u até v em uma árvore
+// da pra generalizar essa ideia para K-esimo elemento do caminho de u ate v em uma arvore
 
 #define pb push_back
 

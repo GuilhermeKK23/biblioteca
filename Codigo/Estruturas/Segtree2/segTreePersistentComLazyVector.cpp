@@ -1,7 +1,7 @@
 // SegTree Persistente com Lazy com vector
 //
-// Constante é meio ruim, mas é mais intuitivo de codar e modificar
-// É uma seg esparsa, então os índices podem ser grandes ou negativos
+// Constante eh meio ruim, mas eh mais intuitivo de codar e modificar
+// Eh uma seg esparsa, então os indices podem ser grandes ou negativos
 // Update retorna a nova raiz
 
 #define int long long

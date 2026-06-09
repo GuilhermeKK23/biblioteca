@@ -1,7 +1,7 @@
 // Seg de Kadane
 //
-// Constante é meio ruim, mas é mais intuitivo de codar e modificar
-// Encontra a soma máxima em intervalo
+// Constante eh meio ruim, mas eh mais intuitivo de codar e modificar
+// Encontra a soma maxima em intervalo
 
 #define int long long
 
