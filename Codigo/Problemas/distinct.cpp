@@ -9,7 +9,8 @@ int qt[MAX];
 
 void build(vector<int>& v) {
 	int n = v.size();
-	perseg::build(n);
+	vector<int> zero(n, 0);
+	perseg::build(n, zero.data());
 	map<int, int> last;
 	int at = 0;
 	for (int i = 0; i < n; i++) {
