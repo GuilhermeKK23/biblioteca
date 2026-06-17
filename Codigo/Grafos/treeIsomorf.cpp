@@ -31,12 +31,12 @@ struct tree {
 		return mphash[h];
 	}
 	ll thash() {
-		cs.clear();
-		dfs_centroid(0, -1);
-		if (cs.size() == 1) return fhash(cs[0], -1);
-		ll h1 = fhash(cs[0], cs[1]), h2 = fhash(cs[1], cs[0]);
-		return (min(h1, h2) << 30) + max(h1, h2);
-	}
+        cs.clear();
+        dfs_centroid(0,-1);
+        if(cs.size() == 1) return fhash(cs[0],-1)*2LL;
+        ll h1 = fhash(cs[0], cs[1]), h2 = fhash(cs[1], cs[0]);
+        return ((min(h1,h2) << 30) + max(h1,h2))*2LL+1LL;
+    }
 };
 
 
@@ -47,6 +47,8 @@ struct tree {
 // use o vetor forb[] para marcar vertices que nao podem ser visitados.
 //
 // O(|V|.log(|V|))
+
+#warning talvez o hash esteja errado quando n=1 e n=2, olha o thash de cima para corrigir
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
