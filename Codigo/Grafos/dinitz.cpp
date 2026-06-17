@@ -4,6 +4,13 @@
 // Grafo com capacidades 1: O(min(m sqrt(m), m * n^(2/3)))
 // Todo vertice tem grau de entrada ou saida 1: O(m sqrt(n))
 
+// Minimum Vertex Cover = Maximum Matching em grafo bipartido
+// Maximum Independent Set = N - Minimum Vertex Cover
+// Maximum Independent Set = Maximum Clique do grafo complementar
+// Truque: se modelar o problema para maximum clique, tenta transformar ver se o grafo complementar eh bipartido
+// Teorema de Dilworth: tamanho da maximum antichain = menor tamanho da chain decomposition
+// Teorema de Mirsky: tamanho da maior chain = menor tamanho da antichain decomposition
+
 struct dinitz {
 	const bool scaling = false; // com scaling -> O(nm log(MAXCAP)),
 	int lim;                    // com constante alta
