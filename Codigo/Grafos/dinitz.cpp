@@ -4,12 +4,41 @@
 // Grafo com capacidades 1: O(min(m sqrt(m), m * n^(2/3)))
 // Todo vertice tem grau de entrada ou saida 1: O(m sqrt(n))
 
-// Minimum Vertex Cover = Maximum Matching em grafo bipartido
-// Maximum Independent Set = N - Minimum Vertex Cover
+// Minimum Vertex Cover: menor conjunto de vertices que chega em toda aresta do grafo
+// Teorema de Konig: Minimum Vertex Cover = Maximum Matching em grafo bipartido
+// Recover: roda min-cut e eh so pegar os vertices das arestas do corte
+//
+// Maximum Independent Set: maior conjunto de vertices tal que ninguem eh vizinho
+// Maximum Independent Set = N - Minimum Vertex Cover (os vertices tambem sao complementares)
+// Recover: pega os vertices que nao sao do min cover
+//
+// Maximum Clique: maior conjunto de vertices tal que todo mundo eh vizinho de todo mundo
 // Maximum Independent Set = Maximum Clique do grafo complementar
-// Truque: se modelar o problema para maximum clique, tenta transformar ver se o grafo complementar eh bipartido
-// Teorema de Dilworth: tamanho da maximum antichain = menor tamanho da chain decomposition
-// Teorema de Mirsky: tamanho da maior chain = menor tamanho da antichain decomposition
+// Dica: se modelar o problema para maximum clique, tenta transformar ver se o grafo complementar eh bipartido
+// Recover: sao os mesmos vertices do maximum independent set
+//
+// Minimum Path Cover: menor numero de caminhos (disjuntos ou nao, da pra resolver os 2) para pegar todos os vertices do grafo
+// Para modelar: duplica cada vertice, faz a aresta (a, b) se:
+// se forem caminhos disjuntos, se existe aresta entre a e b
+// se forem caminhos nao disjuntos, se existe caminho entre a e b
+// Recover: roda o mincut e pega A_t e B_s (ou uns outros vertices, se vira ai)
+//
+// Maximum Closure: dado um grafo direcionado, vertices com pesos positivos ou negativos,
+// existe aresta (u, v) se escolher u te obriga a pegar v (talvez seja o contrario, mas acho que ta certo), 
+// quero saber o maximo (ou minimo) custo que posso conseguir
+// primeiro, pega as SCC, depois cria um grafo em que se a[u]>0 entao existe uma aresta (src, u, a[u]),
+// e se a[u]<0 entao existe uma aresta (u, snk, -a[u]), e as arestas normais tem capacidade inf
+// agora roda o min-cut e a resposta eh a soma dos vertices que voce chega saindo de src
+// Recover: sao os vertices que voce chega saindo de src
+//
+// Teorema de Dilworth: tamanho da maximum antichain = menor tamanho da chain decomposition (disjunta)
+// Teorema de Mirsky: tamanho da maior chain = menor tamanho da antichain decomposition (disjunta, mas tanto faz)
+// Teorema de Erdos-Szekeres: uma sequencia de pelo menos rs+1 numeros reais tem uma subsequencia crescente
+// de tamanho r+1 ou uma subsequencia decrescente de tamanho s+1
+// Dica 1: as vezes vc usa o teorema pra chegar em outro problema, nao um grafo. Por exemplo, LIS
+// Dica 2: as vezes o numero de caminhos disjuntos eh igual ao numero de caminhos nao necessariamente disjuntos,
+// ai nao precisa construir as O(N^2) arestas. Por exemplo, se o dag for de subsets
+
 
 struct dinitz {
 	const bool scaling = false; // com scaling -> O(nm log(MAXCAP)),
