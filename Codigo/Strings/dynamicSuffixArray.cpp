@@ -157,6 +157,7 @@ struct dyn_sa {
 		return ans;
 	}
 	int query(int i, int j) { // lcp(s[i..], s[j..])
+		//(i<0 || j<0 || i>=s.size() || j>=s.size()) return 0; ajuda a lidar com uns casos chatos
 		if (i == j) return s.size() - i;
 		ll a = tag[mirror(i)], b = tag[mirror(j)];
 		int ret = query(root, 0, 1e18, min(a, b)+1, max(a, b));
@@ -175,6 +176,9 @@ struct dyn_sa {
 		}
 		return ret;
 	}
+
+	//retorna {sa, lcp}, mas sei la como usa esse operator[] dentro do dyn_sa
+	//o que da pra fazer eh algo como: int sa(int i){...} que eh mais intuitivo de usar
 	pair<int, int> operator[](int i) {
 		node* x = root;
 		while (1) {
