@@ -2,6 +2,7 @@
 //
 // Constante eh meio ruim, mas eh mais intuitivo de codar e modificar
 // Find retorna o indice de val
+// Da pra dar reserve no comeco pro push_back ficar mais barato
 
 #define pb push_back
 
