@@ -3,6 +3,8 @@
 // Maximiza c^T x s.t. Ax <= b, x >= 0
 //
 // O(2^n), porem executa em O(n^3) no caso medio
+//
+// Se a matriz A for totalmente unimodular (toda matriz quadrada tiver determinante 0, -1 ou 1), entao a solucao eh inteira
 
 const double eps = 1e-7;
 
