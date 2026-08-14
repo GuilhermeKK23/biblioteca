@@ -1,4 +1,4 @@
-// Functional Graph
+// Functional Graph reduzido
 //
 // Template mais fraco, mas mais legivel
 // Para calcular as coisas, chama lenhadora(n, p), onde n-1
