@@ -260,8 +260,8 @@ Para ver o hash no vim, seleciona as linhas com `Shift+v`, e aperta `Ctrl+h`.
 
 <a href="https://www.star-history.com/?repos=brunomaletta%2Fbiblioteca&type=date&legend=top-left">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/image?repos=brunomaletta/biblioteca&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/image?repos=brunomaletta/biblioteca&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/image?repos=brunomaletta/biblioteca&type=date&legend=top-left" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=brunomaletta/biblioteca&type=date&theme=dark&legend=top-left&sealed_token=NwamUVXrfEUG1vfcWjycHhVQ4giScfJ6wjvikORPtCV01PFi2Q-PgYo_PTGf1aly-jdvB-4zzUA5n-KlnXkaZlcZDJFSXM2UrGAERRHlsL5eq8Y-IzTbVsTOdfYUE0UhR-VXkX4YVieVlpCHgQU5GRSj8E87m7YVU5FQpAHt7D2bvr99tzKYLDel5wsc" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=brunomaletta/biblioteca&type=date&legend=top-left&sealed_token=NwamUVXrfEUG1vfcWjycHhVQ4giScfJ6wjvikORPtCV01PFi2Q-PgYo_PTGf1aly-jdvB-4zzUA5n-KlnXkaZlcZDJFSXM2UrGAERRHlsL5eq8Y-IzTbVsTOdfYUE0UhR-VXkX4YVieVlpCHgQU5GRSj8E87m7YVU5FQpAHt7D2bvr99tzKYLDel5wsc" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=brunomaletta/biblioteca&type=date&legend=top-left&sealed_token=NwamUVXrfEUG1vfcWjycHhVQ4giScfJ6wjvikORPtCV01PFi2Q-PgYo_PTGf1aly-jdvB-4zzUA5n-KlnXkaZlcZDJFSXM2UrGAERRHlsL5eq8Y-IzTbVsTOdfYUE0UhR-VXkX4YVieVlpCHgQU5GRSj8E87m7YVU5FQpAHt7D2bvr99tzKYLDel5wsc" />
  </picture>
 </a>
