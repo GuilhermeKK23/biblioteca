@@ -1,4 +1,4 @@
-// Gerador, Tester e Hash
+// Gerador, Tester, Checker e Hash
 //
 
 int main(int argc, char** argv){
@@ -16,6 +16,20 @@ for((i=1; i<=1000; ++i)) do
     ./solve < in > out1
     ./brute < in > out2
     diff -w out1 out2 || break
+done
+
+g++ gen.cpp -o gen
+g++ solve.cpp -o solve
+g++ check.cpp -o check
+
+// check.sh
+// Para usar: bash check.sh
+for((i=1; i<1000; ++i)) do
+    echo $i
+    ./gen $i > in
+    ./solve < in > out
+    cat in out > io
+    ./check < io || break
 done
 
 // hash.sh
