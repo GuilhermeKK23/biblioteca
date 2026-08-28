@@ -16,17 +16,41 @@ Then we have:
 $$M_X(0) = 0 \qquad M_{X}^{'}(0) = E[x] \qquad  \frac{d^k M_{X} (0)}{d t^k} = E[x^k]$$
 
 \subsection{Distributions}
+
+\subsubsection{Discrete Uniform}
+\begin{itemize}
+\item $X$ is a number between [a, b] and every value has the same probability.
+\end{itemize}
+
+$$P(X = k) = \frac{1}{b-a+1} \qquad E[X] = \frac{a+b}{2} \qquad Var(X) = \frac{(b-a+1)^2-1}{12}$$
+
+\subsubsection{Bernoulli}
+\begin{itemize}
+\item $X$ is 0 if the experiment failed and 1 otherwise. 
+\end{itemize}
+
+$$P(X = 1) = p, P(X = 0) = 1-p \qquad E[X] = p \qquad Var(X) = p(1-p)$$
+
 \subsubsection{Binomial}
 
 \begin{itemize}
 \item  $X$ is the number of successes in a sequence of $n$ independent experiments.
 \end{itemize}
+
 $$P(X = k) = \binom{n}{k}\,p^{k}(1-p)^{n-k} \qquad E[X] = np \qquad Var(X) = np(1-p)$$
 
 \subsubsection{Geometric}
 \begin{itemize}
 \item $X$ is the number of failures in a sequence of independent experiment of Bernoulli until the first success. 
-$$P(X = k) = (1-p)^{k}p \qquad E[X] = \frac{1}{p} \qquad Var(X) = \frac{1-p}{p^2}$$
-
 \end{itemize}
 
+$$P(X = k) = (1-p)^{k}p \qquad E[X] = \frac{1}{p} \qquad Var(X) = \frac{1-p}{p^2}$$
+
+
+\subsubsection{Hipergeometric}
+\begin{itemize}
+\item $N$ is the number of balls, $K$ is the number of red balls,
+$n$ is the number of balls you take (without replacement) and $X$ is the number of red balls you want.
+\end{itemize}
+
+$$P(X = k) = \frac{\binom{K}{k} \binom{N-K}{n-k}}{\binom{N}{n}} \qquad E[X] = n \frac{K}{N} \qquad Var(X) = n \frac{K}{N} (1 - \frac{K}{N}) \frac{N-n}{N-1}$$
