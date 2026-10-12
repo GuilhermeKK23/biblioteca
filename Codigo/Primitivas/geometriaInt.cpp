@@ -49,6 +49,14 @@ bool ccw(pt p, pt q, pt r) { // se p, q, r sao ccw
 	return sarea2(p, q, r) > 0;
 }
 
+bool left(pt p, pt q, pt r){ // se r esta a esquerda da reta (p, q)
+    return ccw(p, q, r);
+}
+
+bool right(pt p, pt q, pt r){ // se r esta a direita da reta (p, q)
+    return !ccw(p, q, r) && !col(p, q, r);
+}
+
 int quad(pt p) { // quadrante de um ponto
 	return (p.x<0)^3*(p.y<0);
 }
@@ -173,6 +181,33 @@ struct convex_pol {
 		if (l == pol.size()) return false;
 		return !ccw(p, pol[l], pol[l-1]);
 	}
+
+	// eh tipo a funcao anterior, so que mais completa
+	// se o ponto ta dentro do convex hull: retorna 0 se ta fora,
+    // 1 se ta no interior e 2 se ta na borda - O(log(n))
+    // se for 2, tambem retorna a linha que teve intersec
+    pair<int, line> inpol(pt p) {
+        int n = pol.size();
+        if (!n) return {0, {}};
+        if (n == 1) return {p == pol[0] ? 2 : 0, {pol[0], pol[0]}};
+
+        int l = 1, r = n;
+        while (l < r) {
+            int m = (l + r) / 2;
+            ccw(p, pol[0], pol[m]) ? l = m + 1 : r = m;
+        }
+
+        auto L = [&](int i, int j) { return line(pol[i], pol[j]); };
+        
+        if (l == 1) return isinseg(p, L(0, 1)) ? pair{2, L(0, 1)} : pair{0, L(0, 0)};
+        if (l == n) return isinseg(p, L(0, n-1)) ? pair{2, L(n-1, 0)} : pair{0, L(0, 0)};
+        if (isinseg(p, L(l-1, l))) return {2, L(l-1, l)};
+        if (l == 2 && isinseg(p, L(0, 1))) return {2, L(0, 1)};
+        if (l == n-1 && isinseg(p, L(n-1, 0))) return {2, L(n-1, 0)};
+        
+        return {ccw(pol[l-1], pol[l], p) ? 1 : 0, L(0, 0)};
+    }
+
 	// ponto extremo em relacao a cmp(p, q) = p mais extremo q
 	// (copiado de https://github.com/gustavoM32/caderno-zika)
 	int extreme(const function<bool(pt, pt)>& cmp) {
